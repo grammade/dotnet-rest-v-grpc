@@ -13,9 +13,7 @@ public class GrpcVsRestBenchmark
 {
     private static readonly HttpClient httpClient = new HttpClient();
     private static readonly GrpcChannel grpcChannel = GrpcChannel.ForAddress(
-        //"http://localhost:5000"
-        "https://localhost:6001"
-        //, new GrpcChannelOptions { MaxReceiveMessageSize = 1024 * 1024 * 10}
+        "https://robin-rider-image-border.trycloudflare.com"
         );
     private static readonly ProductProtoService.ProductProtoServiceClient grpcClient = new ProductProtoService.ProductProtoServiceClient(grpcChannel);
 
