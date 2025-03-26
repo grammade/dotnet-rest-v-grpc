@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netGrpcOne", "Project\netGr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmark", "Benchmark\Benchmark.csproj", "{C1F2A415-BE48-495B-ABCF-3820B4540BBA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48D19B22-5968-47DB-A761-DA4486558D67}"
+	ProjectSection(SolutionItems) = preProject
+		Protos\product.proto = Protos\product.proto
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +22,8 @@ Global
 		{D9A6EF33-79CA-4DE5-A5B1-C795FBECBC83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9A6EF33-79CA-4DE5-A5B1-C795FBECBC83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9A6EF33-79CA-4DE5-A5B1-C795FBECBC83}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1F2A415-BE48-495B-ABCF-3820B4540BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1F2A415-BE48-495B-ABCF-3820B4540BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1F2A415-BE48-495B-ABCF-3820B4540BBA}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{C1F2A415-BE48-495B-ABCF-3820B4540BBA}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{C1F2A415-BE48-495B-ABCF-3820B4540BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1F2A415-BE48-495B-ABCF-3820B4540BBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

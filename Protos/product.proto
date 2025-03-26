@@ -1,0 +1,52 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Proto.Product";
+
+package product;
+
+service ProductProtoService{
+  rpc GetProductBigSize (ProtoProductRequest) returns (ProtoProductResponse);
+  rpc GetProductSmallSize (ProtoProductRequest) returns (ProtoProductSmall);
+  rpc GetProductComplex (ProtoProductRequest) returns (ProtoProductResponse);
+}
+
+message ProtoProductRequest {
+  int32 count = 1;
+}
+
+message ProtoProductResponse {
+  repeated ProtoProduct products = 1;
+}
+
+message ProtoProduct {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+  double price = 4;
+  string category = 5;
+  repeated string tags = 6;
+  map<string, string> attributes = 7;
+  repeated ProductImage images = 8;
+  ProductDimensions dimensions = 9;
+  bytes blob = 10;
+  int64 created_at = 11; // Represent DateTime as Unix timestamp (seconds since epoch)
+  bool is_available = 12;
+}
+
+message ProductImage {
+  string url = 1;
+  string alt_text = 2;
+  int32 width = 3;
+  int32 height = 4;
+}
+
+message ProductDimensions {
+  double length = 1;
+  double width = 2;
+  double height = 3;
+  string unit = 4;
+}
+
+message ProtoProductSmall{
+	repeated ProductDimensions dimensions = 1;
+}
