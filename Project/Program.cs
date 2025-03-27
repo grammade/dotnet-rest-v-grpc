@@ -16,20 +16,6 @@ public static class Program
         ILog logger = LogManager.GetLogger(typeof(Program));
         logger.Info("app starting");
         var builder = WebApplication.CreateBuilder(args);
-        //builder.WebHost.ConfigureKestrel(serverOptions =>
-        //{
-        //    serverOptions.ListenAnyIP(6001, listenOptions =>
-        //    {
-        //        listenOptions.Protocols = Microsoft.AspNetCore.Server.Kestrel.Core.HttpProtocols.Http1AndHttp2; 
-        //        listenOptions.UseHttps();
-        //    });
-        //    // Plaintext endpoint
-        //    serverOptions.ListenAnyIP(5000, listenOptions => 
-        //    {
-        //        listenOptions.Protocols = Microsoft.AspNetCore.Server.Kestrel.Core.HttpProtocols.Http2;
-        //    });
-        //});
-
 
 
         // Add services to the container.
@@ -61,8 +47,8 @@ public static class Program
         app.UseSwagger();
         app.UseSwaggerUI(options => // UseSwaggerUI is called only in Development.
         {
-            options.SwaggerEndpoint("v1/swagger.json", "v1");
-            //options.RoutePrefix = string.Empty;
+            options.SwaggerEndpoint("swagger/v1/swagger.json", "v1");
+            options.RoutePrefix = string.Empty;
         });
 
         logger.Info("app started");
